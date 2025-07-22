@@ -49,7 +49,6 @@ exports.updateCategory = async (req, res) => {
 
 exports.deleteCategory = async (req, res) => {
   try {
-    // Primero verificar si hay productos asociados
     const products = await Category.getProducts(req.params.id);
     if (products.length > 0) {
       return res.status(400).json({ 

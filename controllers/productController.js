@@ -25,7 +25,6 @@ exports.createProduct = async (req, res) => {
   try {
     const { name, description, price, category_id } = req.body;
     
-    // Validaciones básicas
     if (!name || !description || !price || !category_id) {
       return res.status(400).json({ message: 'All fields are required' });
     }
@@ -44,7 +43,6 @@ exports.updateProduct = async (req, res) => {
   try {
     const { name, description, price, category_id } = req.body;
     
-    // Validaciones básicas
     if (!name || !description || !price || !category_id) {
       return res.status(400).json({ message: 'All fields are required' });
     }

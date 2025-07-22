@@ -13,12 +13,12 @@ const PORT = process.env.PORT || 5000;
 
 
 
-// Middlewares
+
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Test DB connection
+
 db.verifyConnection()
   .then(() => console.log('Database connected...'))
   .catch(err => console.log('Error: ' + err));

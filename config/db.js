@@ -8,7 +8,6 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME || 'product_management'
 });
 
-// Función query genérica
 const query = async (sql, params) => {
   const [rows] = await pool.query(sql, params);
   return rows;
